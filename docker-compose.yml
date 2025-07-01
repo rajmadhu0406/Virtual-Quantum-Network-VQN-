@@ -1,0 +1,63 @@
+version: '3.8'
+services:
+  backend:
+    # image: cloudserver2registry.azurecr.io/cloud-server-backend-local:latest
+    build: ./backend
+    restart: on-failure
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}
+    ports:
+      - 8000:8000
+    depends_on:
+      - mysql
+    volumes:
+      - ./backend:/app
+    networks:
+      - internal-network1
+  frontend:
+    # image: cloudserver2registry.azurecr.io/cloud-server-frontend-local:latest
+    build: ./frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+      - mysql
+    environment:
+      - WATCHPACK_POLLING=true
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - internal-network1
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: resources
+      MYSQL_USER: raj
+      MYSQL_PASSWORD: root
+    ports:
+      - "3307:3306"
+    volumes:
+      - my-db:/var/lib/mysql
+    networks:
+      - internal-network1
+  redis:
+    image: redis:latest
+    container_name: redis_container
+    ports:
+      - "6379:6379"
+    networks:
+      - internal-network1
+
+volumes:
+  my-db:
+
+networks:
+  internal-network1:
+    driver: bridge

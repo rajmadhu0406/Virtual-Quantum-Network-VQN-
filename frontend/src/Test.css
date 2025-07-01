@@ -1,0 +1,114 @@
+.container {
+    margin: 50px auto;
+    width: 300px;
+  }
+  
+  .error {
+    color: red;
+  }
+  
+  .loading {
+    color: blue;
+  }
+
+  .loading-container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+  }
+
+  .loading-icon {
+    width: 24px; /* Adjust the width as needed */
+    height: 24px; /* Adjust the height as needed */
+    border: 4px solid #f3f3f3; /* Light gray border */
+    border-top: 4px solid #3498db; /* Blue border on top */
+    border-radius: 50%; /* Circular shape */
+    animation: spin 1s linear infinite; /* Apply the animation */
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); } /* Rotate 0 degrees at the start */
+    100% { transform: rotate(360deg); } /* Rotate 360 degrees at the end */
+  }
+  
+  
+  .response {
+    margin-top: 10px;
+  }
+  
+  /* Dialog Box Styles */
+  .dialog-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dialog-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dialog-header {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .success-icon {
+    font-size: 48px;
+    color: green; /* or red */
+  }
+
+  .error-icon{
+    font-size: 48px;
+    color: red; /* or red */
+  }
+  
+  .dialog-body {
+    margin: 20px 0;
+  }
+  
+  .dialog-footer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cancel-button, .navigate-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .cancel-button {
+    background-color: #ccc;
+  }
+  
+  .navigate-button {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+  
+  .form-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+ .form-button:hover {
+    background-color: #45a049;
+  }
