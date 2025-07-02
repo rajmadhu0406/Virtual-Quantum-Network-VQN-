@@ -63,11 +63,11 @@ The code and design are intended to support reproducible research and experiment
 
 ## Technology Stack
 
-- **Backend**: Python, FastAPI, SQLAlchemy, aioredis, aioboto3, MySQL
-- **Frontend**: React, Axios, React Router
+- **Backend**: Python, FastAPI, SQLAlchemy, MySQL
+- **Frontend**: ReactJS
 - **Queue/Cache**: Redis
 - **Notifications**: AWS SES
-- **Containerization**: Docker, Docker Compose
+- **Containerization**: Docker
 - **Orchestration**: Kubernetes
 
 ---
@@ -86,12 +86,11 @@ The code and design are intended to support reproducible research and experiment
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/resource-allocation-quantum-networks.git
-   cd resource-allocation-quantum-networks
+   git clone https://github.com/rajmadhu0406/Virtual-Quantum-Network-VQN-.git
    ```
 
 2. **Set up environment variables:**
-   - Copy `.env.example` to `.env` and fill in your AWS credentials.
+   - Create `.env` and fill in your AWS credentials.
 
 3. **Start all services:**
    ```sh
