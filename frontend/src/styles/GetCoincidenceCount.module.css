@@ -1,0 +1,56 @@
+.heading{
+    text-align: center;
+    margin-top: 2%;
+    color: red;;
+}
+
+
+
+.form_container{
+    text-align: center;
+    margin-top: 1%;
+    align-items: center;
+    display: flex;
+    flex-direction: column; 
+}
+
+.form_container label {
+    font-size: 120%;
+    font-weight: 650;
+}
+
+.form_container input {
+    padding: 0.5%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 15%;
+    font-size: 120%;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-bottom: 1%;
+}
+
+.form_container input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
+}
+
+/* Style for the submit button */
+.form_container button {
+    padding: 1% 1.5%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 10%;
+    transition: background-color 0.3s ease;
+    margin-top: 2%;
+    font-size: 1.0vw;
+}
+
+/* Change button color on hover */
+.form_container button:hover {
+    background-color: #45a049;
+}
+

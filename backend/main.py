@@ -4,6 +4,10 @@ from api.switch_api import router as switch_routers
 from api.channel_api import router as channel_routers
 from api.auth_api import router as auth_routers
 from api.channel_api import print_redis_request_length
+from api.counter_api import router as counter_api
+from api.countrate_api import router as countrate_api
+from api.timetagger_api import router as timetagger_api
+from api.coincidence_api import router as coincidence_api
 from allocation import process_request
 from api.user_api import router as user_routers
 import api.auth_api as authService
@@ -39,7 +43,10 @@ app.include_router(switch_routers)
 app.include_router(channel_routers)
 app.include_router(auth_routers)
 app.include_router(user_routers)
-
+app.include_router(counter_api.router)
+app.include_router(countrate_api.router)
+app.include_router(timetagger_api.router)
+app.include_router(coincidence_api.router)
 
 
 @app.get("/api")

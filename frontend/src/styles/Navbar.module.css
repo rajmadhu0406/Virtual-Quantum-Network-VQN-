@@ -1,0 +1,60 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+}
+
+.navbar_hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    /* display: none; */
+}
+
+.navbar {
+    background-color: azure;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center contents of the navbar */
+    background-color: cadetblue;
+}
+
+.logout_button_hidden {
+    display: none;
+}
+
+.logout_button_visible {
+    color: red !important;
+}
+
+.logout_button_visible a {
+    color: rgba(138, 25, 12, 0.841) !important;
+}
+
+
+.navbar_links {
+    width: 50%;
+    list-style: none;
+    text-align: center;
+    gap: 10%;
+    margin: 0.2%;
+    padding: 0.2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center elements within navbar_links */
+}
+
+.navbar_links a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar_links a:hover {
+    text-decoration: underline;
+}
+
+.navbar_links li {
+    padding: 1%;
+}

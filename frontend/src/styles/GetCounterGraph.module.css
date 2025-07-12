@@ -1,0 +1,153 @@
+.heading {
+    text-align: center;
+    margin-top: 2%;
+    color: red;
+}
+
+.form_container{
+    text-align: center;
+    margin-top: 0.5%;
+    align-items: center;
+    display: flex;
+    flex-direction: column; 
+}
+
+.form_style {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;    
+    width: 80%;
+    height: 90%;
+}
+
+
+
+.form_style label {
+    font-size: 120%;
+    font-weight: 750;
+}
+
+.form_style input {
+    padding: 0.5%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 15%;
+    font-size: 120%;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-bottom: 1%;
+}
+
+.form_style input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
+}
+
+/* Style for the submit button */
+.form_style button {
+    padding: 1% 1.5%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 10%;
+    transition: background-color 0.3s ease;
+    margin-top: 2%;
+}
+
+/* Change button color on hover */
+.form_style button:hover {
+    background-color: #45a049;
+}
+
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh; /* Adjust height to take up the remaining space */
+    /* overflow-y: hidden; Ensure content can scroll if it overflows */
+}
+
+
+
+/* Ensure the form container hides the space taken up by it */
+.form-container-hidden {
+    opacity: 0;
+    pointer-events: none;
+    /* Disables interactions */
+    visibility: hidden;
+    height: 0;
+    /* Remove space occupied by the form */
+    transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
+}
+
+.form-container-visible {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+.graph-container-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Graph container to ensure the graph takes up the full height and width of the screen */
+.graph-container-visible {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.graph-container-visible canvas {
+    width: 90vh;
+    height: auto;
+}
+
+
+/* Style for the submit button */
+.button-style {
+    padding: 1% 1.5%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 8%;
+    transition: background-color 0.3s ease;
+    margin-top: 2%;
+    font-size: 1.0vw;
+}
+
+/* Change button color on hover */
+.button-style:hover {
+    background-color: #45a049;
+}
+
+.graph_info p{
+    font-size: 120%;
+    font-weight: 750;
+}
